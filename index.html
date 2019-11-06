@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Basic Web Workers Example</title>
+
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <h1 class="title">Horribly Inefficient Bouncy Fibonacci Calculator</h1>
+    <p id="display">Enter a value to calculate</p>
+    <canvas id="canvas" height="300"></canvas>
+    <form id="input-form" class="input-form">
+      <input id="input" type="number" min="0" step="1" placeholder="Enter a position" required />
+      <button>Calculate</button>
+    </form>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
