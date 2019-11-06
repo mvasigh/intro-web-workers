@@ -1,5 +1,6 @@
 import createBounce from './bounce';
-import fib from './fib';
+// import fib from './fib';
+import asyncFib from './asyncFib'
 
 const form = document.getElementById('input-form');
 const input = document.getElementById('input');
@@ -14,13 +15,16 @@ form.addEventListener('submit', e => {
   const value = input.valueAsNumber;
   const startTime = performance.now();
 
-  // ! This code is blocking! 🚨 Fix it with a Web Worker
-  const result = fib(value);
+  // This code is blocking! 🚨 Fix it with a Web Worker
+  // const result = fib(value);
 
-  const endTime = performance.now();
-  const time = (endTime - startTime).toFixed(2);
-  display.textContent = `Done! Result: ${result}, Time: ${time} ms`;
-  input.value = '';
+  asyncFib(value)
+    .then(result => {
+      const endTime = performance.now();
+      const time = (endTime - startTime).toFixed(2);
+      display.textContent = `Done! Result: ${result}, Time: ${time} ms`;
+      input.value = '';
+    })
 });
 
 bounce();
