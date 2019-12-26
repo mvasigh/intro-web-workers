@@ -1,5 +1,5 @@
 {
-  "name": "2-advanced",
+  "name": "web-worker-example",
   "version": "1.0.0",
   "description": "Basic Web Workers example",
   "main": "index.html",

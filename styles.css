@@ -19,7 +19,7 @@ body > * {
   margin-right: auto;
 }
 
-.input-form > *{
+.input-form > * {
   font-size: 1.3em;
   padding: 0.5em;
 }
@@ -34,4 +34,10 @@ body > * {
   border: none;
   border-radius: 0;
   text-transform: uppercase;
+}
+
+a,
+a:visited,
+a:active {
+  color: white;
 }
