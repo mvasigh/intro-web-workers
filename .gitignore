@@ -71,3 +71,7 @@ yarn-error.log
 
 dist
 .parcel-cache
+static
+
+# Local Netlify folder
+.netlify
