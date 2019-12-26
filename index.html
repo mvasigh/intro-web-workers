@@ -10,10 +10,26 @@
   </head>
   <body>
     <h1 class="title">Horribly Inefficient Bouncy Fibonacci Calculator</h1>
-    <p id="display">Enter a value to calculate</p>
+    <p id="display">Enter a position to calculate</p>
     <canvas id="canvas" height="300"></canvas>
     <form id="input-form" class="input-form">
-      <input id="input" type="number" min="0" step="1" placeholder="Enter a position" required />
+      <div>
+        <input type="radio" id="sync" name="mode" value="sync" checked />
+        <label for="sync">Blocking</label>
+
+        <input type="radio" id="async" name="mode" value="async" />
+        <label for="async">Non-blocking (Worker)</label>
+      </div>
+      <input
+        id="input"
+        type="number"
+        min="0"
+        step="1"
+        placeholder="Enter a position"
+        autocomplete="off"
+        required
+      />
+
       <button>Calculate</button>
     </form>
     <script src="./src/index.js"></script>
